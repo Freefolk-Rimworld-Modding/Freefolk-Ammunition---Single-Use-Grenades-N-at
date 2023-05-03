@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[not(comps) and *[self::defName="VFE_ThrowingAxe" or self::defName="VFE_Harpoon"]]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[not(comps) and *[self::defName="VFE_ThrowingAxe" or self::defName="VFE_Harpoon"]]</xpath>
+      <value>
+        <comps />
+      </value>
+    </match>
+  </Operation>
+
+  <!-- This is to disable quality --> 
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/ThingDef[defName="VFE_ThrowingAxe" or defName="VFE_Harpoon"]/comps</xpath>
+    <attribute>Inherit</attribute>
+    <value>false</value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="VFE_ThrowingAxe" or defName="VFE_Harpoon"]/comps</xpath>
+    <value>
+        <!-- These are readded since comps is now Inherit="false" -->  
+        <li Class="CompProperties_Forbiddable"/>      
+        <li>
+          <compClass>CompEquippable</compClass>
+        </li>
+        <li Class="CompProperties_Styleable"></li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="VFE_ThrowingAxe"]</xpath>
+    <value>
+      <li Class="SingleUseGNAT.GenerateWithEquip">
+        <generateEquip>
+          <VFE_ThrowingAxe>5~10</VFE_ThrowingAxe>
+        </generateEquip>
+      </li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="VFE_Harpoon"]</xpath>
+    <value>
+      <li Class="SingleUseGNAT.GenerateWithEquip">
+        <generateEquip>
+          <VFE_Harpoon>5~10</VFE_Harpoon>
+        </generateEquip>
+      </li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[not(tradeTags) and *[self::defName="VFE_ThrowingAxe" or self::defName="VFE_Harpoon"]]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[not(tradeTags) and *[self::defName="VFE_ThrowingAxe" or self::defName="VFE_Harpoon"]]</xpath>
+      <value>
+        <tradeTags />
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="VFE_ThrowingAxe" or defName="VFE_Harpoon"]/tradeTags</xpath>
+    <value>
+      <li>FF_Throwable</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/ThingDef[defName="VFE_ThrowingAxe" or defName="VFE_Harpoon"]/*[self::stuffCategories or self::costStuffCount or self::recipeMaker]</xpath>
+    <attribute>IsNull</attribute>
+    <value>true</value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="VFE_ThrowingAxe" or defName="VFE_Harpoon"]</xpath>
+    <value>
+      <stackLimit>10</stackLimit>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="VFE_ThrowingAxe"]/statBases</xpath>
+    <value>
+      <MarketValue>10</MarketValue>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="VFE_Harpoon"]/statBases</xpath>
+    <value>
+      <MarketValue>26</MarketValue>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="VFE_ThrowingAxe"]/statBases/Mass</xpath>
+    <value>
+      <Mass>0.12</Mass>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="VFE_Harpoon"]/statBases/Mass</xpath>
+    <value>
+      <Mass>0.4</Mass>
+    </value>
+  </Operation>
+
+</Patch>

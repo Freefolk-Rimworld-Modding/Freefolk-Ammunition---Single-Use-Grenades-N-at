@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[not(comps)][defName="VWE_Throwing_Knives" or defName="VWE_Throwing_Rocks"]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[not(comps)][defName="VWE_Throwing_Knives" or defName="VWE_Throwing_Rocks"]</xpath>
+      <value>
+        <comps />
+      </value>
+    </match>
+  </Operation>
+
+  <!-- This is to disable quality --> 
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/ThingDef[defName="VWE_Throwing_Knives" or defName="VWE_Throwing_Rocks"]/comps</xpath>
+    <attribute>Inherit</attribute>
+    <value>false</value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="VWE_Throwing_Knives" or defName="VWE_Throwing_Rocks"]/comps</xpath>
+    <value>
+        <!-- These are readded since comps is now Inherit="false" -->  
+        <li Class="CompProperties_Forbiddable"/>      
+        <li>
+          <compClass>CompEquippable</compClass>
+        </li>
+        <li Class="CompProperties_Styleable"></li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="VWE_Throwing_Knives"]</xpath>
+    <value>
+      <li Class="SingleUseGNAT.GenerateWithEquip">
+        <generateEquip>
+          <VWE_Throwing_Knives>5~10</VWE_Throwing_Knives>
+        </generateEquip>
+      </li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="VWE_Throwing_Rocks"]</xpath>
+    <value>
+      <li Class="SingleUseGNAT.GenerateWithEquip">
+        <generateEquip>
+          <VWE_Throwing_Rocks>5~10</VWE_Throwing_Rocks>
+        </generateEquip>
+      </li>
+      <li MayRequire="LimeTreeSnake.Ammunition" Class="Ammunition.DefModExtensions.AmmunitionExtension" />
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[not(tradeTags) and *[self::defName="VWE_Throwing_Knives" or self::defName="VWE_Throwing_Rocks"]]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[not(tradeTags) and *[self::defName="VWE_Throwing_Knives" or self::defName="VWE_Throwing_Rocks"]]</xpath>
+      <value>
+        <tradeTags />
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="VWE_Throwing_Knives" or defName="VWE_Throwing_Rocks"]/tradeTags</xpath>
+    <value>
+      <li>FF_Throwable</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/ThingDef[defName="VWE_Throwing_Knives" or defName="VWE_Throwing_Rocks"]/*[self::stuffCategories or self::costStuffCount or self::recipeMaker]</xpath>
+    <attribute>IsNull</attribute>
+    <value>true</value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="VWE_Throwing_Knives" or defName="VWE_Throwing_Rocks"]</xpath>
+    <value>
+      <stackLimit>10</stackLimit>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="VWE_Throwing_Knives"]/statBases</xpath>
+    <value>
+      <MarketValue>10</MarketValue>
+    </value>
+  </Operation>
+<!--
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="VWE_Throwing_Rocks"]/statBases</xpath>
+    <value>
+      <MarketValue>1</MarketValue>
+    </value>
+  </Operation>
+-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="VWE_Throwing_Rocks"]/statBases/Mass</xpath>
+    <value>
+      <Mass>0.3</Mass>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="VWE_Throwing_Knives"]/statBases/Mass</xpath>
+    <value>
+      <Mass>0.1</Mass>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="VWE_Throwing_Knives" or defName="VWE_Throwing_Rocks"]/smeltable</xpath>
+    <value>
+      <smeltable>false</smeltable>
+    </value>
+  </Operation>
+
+</Patch>

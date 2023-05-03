@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RecipeDef>
+    <defName>Make_10xVFES_Tomahawk</defName>
+    <label>make tomahawks x10</label>
+    <description>Make tomahawks x10.</description>
+    <jobString>Making tomahawks x10.</jobString>
+    <workAmount>7200</workAmount>
+    <workSkill>Crafting</workSkill>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_MakeBow</soundWorking>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <researchPrerequisite>Smithing</researchPrerequisite>
+    <skillRequirements>
+      <Crafting>5</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>CraftingSpot</li>
+      <li>FueledSmithy</li>
+      <li>ElectricSmithy</li>
+      <li MayRequire="DankPyon.Medieval.Overhaul">DankPyon_Workbench</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <stuffCategoriesToAllow>
+            <li>Metallic</li>
+            <li>Woody</li>
+            <li>Stony</li>
+          </stuffCategoriesToAllow>
+        </filter>
+        <count>50</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <stuffCategoriesToAllow>
+        <li>Metallic</li>
+        <li>Woody</li>
+        <li>Stony</li>
+      </stuffCategoriesToAllow>
+    </fixedIngredientFilter>
+    <products>
+      <VFES_Tomahawk>10</VFES_Tomahawk>
+    </products>
+  </RecipeDef>
+
+</Defs>

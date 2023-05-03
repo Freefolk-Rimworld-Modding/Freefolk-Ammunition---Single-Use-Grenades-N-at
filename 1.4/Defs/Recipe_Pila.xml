@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RecipeDef>
+    <defName>Make_1xPila</defName>
+    <label>make pila</label>
+    <description>Make pila.</description>
+    <jobString>Making pila.</jobString>
+    <workAmount>700</workAmount>
+    <workSkill>Crafting</workSkill>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_MakeBow</soundWorking>
+    <recipeUsers>
+      <li>CraftingSpot</li>
+      <li>ElectricSmithy</li>
+      <li>FueledSmithy</li>
+      <li MayRequire="DankPyon.Medieval.Overhaul">DankPyon_Workbench</li>
+    </recipeUsers>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <skillRequirements>
+      <Crafting>3</Crafting>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <stuffCategoriesToAllow>
+            <li>Woody</li>
+          </stuffCategoriesToAllow>
+        </filter>
+        <count>7</count>
+      </li>
+    </ingredients>
+    <products>
+      <Pila>1</Pila>
+    </products>
+    <fixedIngredientFilter>
+      <stuffCategoriesToAllow>
+        <li>Woody</li>
+      </stuffCategoriesToAllow>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>Make_10xPila_Bulk</defName>
+    <label>make pila x10</label>
+    <description>Make pila x10.</description>
+    <jobString>Making pila x10.</jobString>
+    <workAmount>7000</workAmount>
+    <workSkill>Crafting</workSkill>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_MakeBow</soundWorking>
+    <recipeUsers>
+      <li>CraftingSpot</li>
+      <li>ElectricSmithy</li>
+      <li>FueledSmithy</li>
+      <li MayRequire="DankPyon.Medieval.Overhaul">DankPyon_Workbench</li>
+    </recipeUsers>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <skillRequirements>
+      <Crafting>3</Crafting>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <stuffCategoriesToAllow>
+            <li>Woody</li>
+          </stuffCategoriesToAllow>
+        </filter>
+        <count>70</count>
+      </li>
+    </ingredients>
+    <products>
+      <Pila>10</Pila>
+    </products>
+    <fixedIngredientFilter>
+      <stuffCategoriesToAllow>
+        <li>Woody</li>
+      </stuffCategoriesToAllow>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+</Defs>

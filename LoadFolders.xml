@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<loadFolders>
+  <v1.4>
+
+    <!-- Vanilla -->
+
+      <li>1.4</li>
+
+    <!-- Ludeon -->
+
+      <li IfModActive="Ludeon.RimWorld.Royalty">1.4/Mods/Ludeon/Royalty</li>
+      <li IfModActive="Ludeon.RimWorld.Biotech">1.4/Mods/Ludeon/Biotech</li>
+
+    <!-- Vanilla Expanded -->
+
+      <li IfModActive="OskarPotocki.VFE.Classical">1.4/Mods/Vanilla_Expanded/VFE_Classical</li>
+      <li IfModActive="OskarPotocki.VanillaFactionsExpanded.MedievalModule">1.4/Mods/Vanilla_Expanded/VFE_Medieval</li>
+      <li IfModActive="OskarPotocki.VanillaFactionsExpanded.SettlersModule">1.4/Mods/Vanilla_Expanded/VFE_Settlers</li>
+      <li IfModActive="OskarPotocki.VFE.Vikings">1.4/Mods/Vanilla_Expanded/VFE_Vikings</li>
+      <li IfModActive="VanillaExpanded.VWE">1.4/Mods/Vanilla_Expanded/VWE</li>
+      <li IfModActive="VanillaExpanded.VWEG">1.4/Mods/Vanilla_Expanded/VWE_Grenades</li>
+      <li IfModActive="VanillaExpanded.VWENL">1.4/Mods/Vanilla_Expanded/VWE_NonLethal</li>
+      <li IfModActive="VanillaExpanded.VWETB">1.4/Mods/Vanilla_Expanded/VWE_Tribal</li>
+ 
+    <!-- Eccentric Tech -->
+
+      <li IfModActive="Aelanna.EccentricTech.Flares2">1.4/Mods/Eccentric_Tech/ET_Flares</li>
+
+    <!-- LimeTreeSnake -->
+
+      <li IfModActive="LimeTreeSnake.Ammunition">1.4/Mods/LTS/Ammunition</li>
+      <li IfModActive="LimeTreeSnake.Military">1.4/Mods/LTS/Military</li>
+
+    <!-- Tyrannical Elmo -->
+
+      <li IfModActive="TyrannicalElmo.IndustrialArmory">1.4/Mods/Tyrannical_Elmo/IndustrialArmory</li>
+
+    <!-- Smoke Grenades & Rimsenal - Augmented Vanilla Pack since they share a defName -->
+
+      <li IfModActive="rimsenal.EVP,Nex.Smoke.Grenades">1.4/Mods/Smoke_Grenades</li>
+
+  </v1.4>
+</loadFolders>

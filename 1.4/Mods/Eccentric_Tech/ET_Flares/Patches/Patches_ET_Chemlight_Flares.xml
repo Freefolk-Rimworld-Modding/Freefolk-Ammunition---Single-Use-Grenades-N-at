@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+        <!-- Single Use Chemlights/Flares -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>
+      Defs/ThingDef[
+      defName="Eccentric_Flare" or 
+      defName="EccentricChemlightRed" or 
+      defName="EccentricChemlightGreen" or 
+      defName="EccentricChemlightBlue" or 
+      defName="EccentricChemlightYellow"
+      ]/verbs/li/verbClass
+    </xpath>
+    <value>
+      <verbClass>Verb_ShootOneUse</verbClass>
+    </value>
+  </Operation>
+
+        <!-- Reduce Mass -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[@Name="EccentricChemlightBase" or defName="Eccentric_Flare"]/statBases/Mass</xpath>
+    <value>
+      <Mass>0.05</Mass>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[@Name="EccentricChemlightBase"]/statBases</xpath>
+    <value>
+      <MarketValue>9</MarketValue>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Eccentric_Flare"]/statBases</xpath>
+    <value>
+      <MarketValue>14</MarketValue>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[@Name="EccentricChemlightBase" or defName="Eccentric_Flare"]</xpath>
+    <value>
+      <stackLimit>10</stackLimit>
+      <recipeMaker>
+        <productCount>10</productCount>
+      </recipeMaker>
+    </value>
+  </Operation>
+
+</Patch>

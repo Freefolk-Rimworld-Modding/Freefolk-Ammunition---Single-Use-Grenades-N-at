@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[not(comps) and defName="VFEC_Javelin"]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[not(comps) and defName="VFEC_Javelin"]</xpath>
+      <value>
+        <comps />
+      </value>
+    </match>
+  </Operation>
+
+  <!-- This is to disable quality --> 
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/ThingDef[defName="VFEC_Javelin"]/comps</xpath>
+    <attribute>Inherit</attribute>
+    <value>false</value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="VFEC_Javelin"]/comps</xpath>
+    <value>
+        <!-- These are readded since comps is now Inherit="false" -->  
+        <li Class="CompProperties_Forbiddable"/>      
+        <li>
+          <compClass>CompEquippable</compClass>
+        </li>
+        <li Class="CompProperties_Styleable"></li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="VFEC_Javelin"]</xpath>
+    <value>
+      <li Class="SingleUseGNAT.GenerateWithEquip">
+        <generateEquip>
+          <VFEC_Javelin>5~10</VFEC_Javelin>
+        </generateEquip>
+      </li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[not(tradeTags) and defName="VFEC_Javelin"]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[not(tradeTags) and defName="VFEC_Javelin"]</xpath>
+      <value>
+        <tradeTags />
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="VFEC_Javelin"]/tradeTags</xpath>
+    <value>
+      <li>FF_Throwable</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>Defs/ThingDef[defName="VFEC_Javelin"]/*[self::stuffCategories or self::costStuffCount or self::recipeMaker]</xpath>
+    <attribute>IsNull</attribute>
+    <value>true</value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="VFEC_Javelin"]</xpath>
+    <value>
+      <stackLimit>10</stackLimit>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="VFEC_Javelin"]/statBases</xpath>
+    <value>
+      <MarketValue>16</MarketValue>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="VFEC_Javelin"]/statBases/Mass</xpath>
+    <value>
+      <Mass>0.4</Mass>
+    </value>
+  </Operation>
+
+</Patch>

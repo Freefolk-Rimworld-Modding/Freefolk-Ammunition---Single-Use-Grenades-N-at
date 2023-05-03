@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RecipeDef>
+    <defName>Make_10xVFEC_Javelin</defName>
+    <label>make javelins x10</label>
+    <description>Make javelins x10.</description>
+    <jobString>Making javelins x10.</jobString>
+    <workAmount>9000</workAmount>
+    <workSkill>Crafting</workSkill>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_MakeBow</soundWorking>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <researchPrerequisite>Smithing</researchPrerequisite>
+    <skillRequirements>
+      <Crafting>3</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>CraftingSpot</li>
+      <li>FueledSmithy</li>
+      <li>ElectricSmithy</li>
+      <li MayRequire="DankPyon.Medieval.Overhaul">DankPyon_Workbench</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <stuffCategoriesToAllow>
+            <li>Woody</li>
+          </stuffCategoriesToAllow>
+        </filter>
+        <count>25</count>
+      </li>
+      <li>
+        <filter>
+          <stuffCategoriesToAllow>
+            <li>Metallic</li>
+          </stuffCategoriesToAllow>
+        </filter>
+        <count>50</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <stuffCategoriesToAllow>
+        <li>Woody</li>
+        <li>Metallic</li>
+      </stuffCategoriesToAllow>
+    </fixedIngredientFilter>
+    <products>
+      <VFEC_Javelin>10</VFEC_Javelin>
+    </products>
+  </RecipeDef>
+
+</Defs>

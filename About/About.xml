@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+  <ModMetaData>
+    <name>Freefolk Ammunition - Single Use Grenades N'at</name>
+    <author>Freefolk</author>
+    <supportedVersions>
+      <li>1.4</li>
+    </supportedVersions>
+    <packageId>freefolk.ammunition.singleusegnat</packageId>
+    <url></url>
+    <description>Single use grenades and throwable weapons as a stand alone, intended to be used with vanilla ammunition systems such as LTS Ammunition, Yayo's Combat, or Flake Wombat.
+
+Created by Freefolk Modding Team.</description>
+	<modDependencies>
+      <li>
+        <packageId>brrainz.harmony</packageId>
+        <displayName>Harmony</displayName>
+        <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+      </li>
+    </modDependencies>
+    <loadAfter>
+      <li>brrainz.harmony</li>
+      <li>UnlimitedHugs.HugsLib</li>
+      <li>VanillaExpanded.VWEG</li>
+      <li>hlx.ReinforcedMechanoids2</li>
+    </loadAfter>
+    <loadBefore>
+      <li>Donald.VAR</li>
+    </loadBefore>
+    <incompatibleWith>
+      <li>CETeam.CombatExtended</li>
+    </incompatibleWith>
+  </ModMetaData>

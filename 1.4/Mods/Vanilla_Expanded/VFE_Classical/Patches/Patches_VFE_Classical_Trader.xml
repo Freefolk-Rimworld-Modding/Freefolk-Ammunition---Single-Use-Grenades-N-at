@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TraderKindDef[defName="VFEC_Caravan_Republic_WarMerchant"]/stockGenerators</xpath>
+    <value>
+      <li Class="StockGenerator_Tag">
+        <tradeTag>FF_Throwable</tradeTag>
+        <thingDefCountRange>1~1</thingDefCountRange>
+        <totalPriceRange>100~200</totalPriceRange>
+      </li>
+    </value>
+  </Operation>
+
+</Patch>

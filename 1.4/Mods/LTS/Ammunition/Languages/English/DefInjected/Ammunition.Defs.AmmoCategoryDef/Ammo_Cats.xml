@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LanguageData>
+
+  <FF_LTS_Pila.label>Pila(translated)</FF_LTS_Pila.label>
+  <FF_LTS_Throwing_Rocks.label>Throwing Rocks(translated)</FF_LTS_Throwing_Rocks.label>
+
+  <FF_LTS_Weapon_GrenadeFrag.label>Frag Grenade(translated)</FF_LTS_Weapon_GrenadeFrag.label>
+  <FF_LTS_Weapon_GrenadeEMP.label>EMP Grenade(translated)</FF_LTS_Weapon_GrenadeEMP.label>
+  <FF_LTS_Weapon_GrenadeMolotov.label>Molotov Cocktail(translated)</FF_LTS_Weapon_GrenadeMolotov.label>
+  <FF_LTS_Weapon_GrenadeTox.label>Tox Grenade(translated)</FF_LTS_Weapon_GrenadeTox.label>
+  <FF_LTS_VWE_FlashGrenade.label>Flash Grenade(translated)</FF_LTS_VWE_FlashGrenade.label>
+  <FF_LTS_SmokeGrenade.label>Smoke Grenade(translated)</FF_LTS_SmokeGrenade.label>
+  <FF_LTS_VWE_TearGasGrenade.label>Tear Gas Grenade(translated)</FF_LTS_VWE_TearGasGrenade.label>
+
+</LanguageData>
+

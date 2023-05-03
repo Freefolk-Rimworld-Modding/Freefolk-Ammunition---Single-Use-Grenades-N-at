@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <Ammunition.Defs.AmmoCategoryDef>
+    <defName>FF_LTS_Pila</defName>
+    <label>Pila</label>
+    <ammoType>Explosive</ammoType>
+    <ammoDefs>
+      <li>Pila</li>
+      <li MayRequire="OskarPotocki.VFE.Classical">VFEC_Javelin</li>
+    </ammoDefs>
+    <includeWeaponDefs />
+    <excludeWeaponDefs />
+  </Ammunition.Defs.AmmoCategoryDef>
+
+  <Ammunition.Defs.AmmoCategoryDef MayRequireAnyOf="VanillaExpanded.VWE">
+    <defName>FF_LTS_Throwing_Rocks</defName>
+    <label>Throwing Rocks</label>
+    <ammoType>Explosive</ammoType>
+    <ammoDefs>
+      <li MayRequire="VanillaExpanded.VWE">VWE_Throwing_Rocks</li>
+    </ammoDefs>
+    <includeWeaponDefs />
+    <excludeWeaponDefs />
+  </Ammunition.Defs.AmmoCategoryDef>
+
+  <Ammunition.Defs.AmmoCategoryDef>
+    <defName>FF_LTS_Weapon_GrenadeFrag</defName>
+    <label>Frag Grenade</label>
+    <ammoType>Explosive</ammoType>
+    <ammoDefs>
+      <li>Weapon_GrenadeFrag</li>
+      <li MayRequire="LimeTreeSnake.Military">LTS_Handgranat</li>
+    </ammoDefs>
+    <includeWeaponDefs />
+    <excludeWeaponDefs />
+  </Ammunition.Defs.AmmoCategoryDef>
+
+  <Ammunition.Defs.AmmoCategoryDef>
+    <defName>FF_LTS_Weapon_GrenadeEMP</defName>
+    <label>EMP Grenade</label>
+    <ammoType>Explosive</ammoType>
+    <ammoDefs>
+      <li>Weapon_GrenadeEMP</li>
+    </ammoDefs>
+    <includeWeaponDefs />
+    <excludeWeaponDefs />
+  </Ammunition.Defs.AmmoCategoryDef>
+
+  <Ammunition.Defs.AmmoCategoryDef>
+    <defName>FF_LTS_Weapon_GrenadeMolotov</defName>
+    <label>Molotov Cocktail</label>
+    <ammoType>Explosive</ammoType>
+    <ammoDefs>
+      <li>Weapon_GrenadeMolotov</li>
+      <li MayRequire="TyrannicalElmo.IndustrialArmory">IA_Weapon_GrenadeIncendiary</li>
+    </ammoDefs>
+    <includeWeaponDefs />
+    <excludeWeaponDefs />
+  </Ammunition.Defs.AmmoCategoryDef>
+
+  <Ammunition.Defs.AmmoCategoryDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>FF_LTS_Weapon_GrenadeTox</defName>
+    <label>Tox Grenades</label>
+    <ammoType>Explosive</ammoType>
+    <ammoDefs>
+      <li>Weapon_GrenadeTox</li>
+    </ammoDefs>
+    <includeWeaponDefs />
+    <excludeWeaponDefs />
+  </Ammunition.Defs.AmmoCategoryDef>
+
+  <Ammunition.Defs.AmmoCategoryDef MayRequireAnyOf="VanillaExpanded.VWE,TyrannicalElmo.IndustrialArmory">
+    <defName>FF_LTS_VWE_FlashGrenade</defName>
+    <label>Flash Grenades</label>
+    <ammoType>Explosive</ammoType>
+    <ammoDefs>
+      <li MayRequire="VanillaExpanded.VWE">VWE_FlashGrenade</li>
+      <li MayRequire="TyrannicalElmo.IndustrialArmory">IA_Weapon_GrenadeFlash</li>
+    </ammoDefs>
+    <includeWeaponDefs />
+    <excludeWeaponDefs />
+  </Ammunition.Defs.AmmoCategoryDef>
+
+  <Ammunition.Defs.AmmoCategoryDef MayRequireAnyOf="VanillaExpanded.VWE,rimsenal.EVP,Nex.Smoke.Grenades,TyrannicalElmo.IndustrialArmory">
+    <defName>FF_LTS_SmokeGrenade</defName>
+    <label>Smoke Grenades</label>
+    <ammoType>Explosive</ammoType>
+    <ammoDefs>
+      <li MayRequire="VanillaExpanded.VWE">VWE_SmokeGrenade</li>
+      <li MayRequireAnyOf="rimsenal.EVP,Nex.Smoke.Grenades">Weapon_GrenadeSmoke</li>
+      <li MayRequire="TyrannicalElmo.IndustrialArmory">IA_Weapon_GrenadeSmoke</li>
+    </ammoDefs>
+    <includeWeaponDefs />
+    <excludeWeaponDefs />
+  </Ammunition.Defs.AmmoCategoryDef>
+
+  <Ammunition.Defs.AmmoCategoryDef MayRequireAnyOf="VanillaExpanded.VWENL">
+    <defName>FF_LTS_VWE_TearGasGrenade</defName>
+    <label>Tear Gas Grenades</label>
+    <ammoType>Explosive</ammoType>
+    <ammoDefs>
+      <li MayRequire="VanillaExpanded.VWENL">VWE_TearGasGrenade</li>
+    </ammoDefs>
+    <includeWeaponDefs />
+    <excludeWeaponDefs />
+  </Ammunition.Defs.AmmoCategoryDef>
+
+</Defs>

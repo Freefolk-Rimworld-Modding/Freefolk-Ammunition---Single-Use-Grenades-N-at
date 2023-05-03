@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[
+      defName="VWE_Apparel_GrenadeFragBelt" or 
+      defName="VWE_Apparel_GrenadeMolotovBelt" or 
+      defName="VWE_Apparel_GrenadeEMPBelt" or 
+      defName="VWE_Apparel_GrenadeToxicBelt" or 
+      defName="VWE_Apparel_GrenadeSmokeBelt" or 
+      defName="VWE_Apparel_GrenadeFlashBelt" or 
+      defName="VWE_Apparel_GrenadeTearGasBelt" or 
+      defName="VWE_Apparel_DynamiteBelt"
+    ]/comps/li[@Class="CompProperties_Reloadable"]/ammoCountToRefill</xpath>
+    <value>
+      <ammoCountPerCharge>1</ammoCountPerCharge>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="VWE_Apparel_GrenadeFragBelt"]/costList/Weapon_GrenadeFrag</xpath>
+    <value>
+      <Weapon_GrenadeFrag>8</Weapon_GrenadeFrag>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="VWE_Apparel_GrenadeMolotovBelt"]/costList/Weapon_GrenadeMolotov</xpath>
+    <value>
+      <Weapon_GrenadeMolotov>8</Weapon_GrenadeMolotov>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="VWE_Apparel_GrenadeEMPBelt"]/costList/Weapon_GrenadeEMP</xpath>
+    <value>
+      <Weapon_GrenadeEMP>10</Weapon_GrenadeEMP>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationSequence">
+      <operations>
+
+        <li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Biotech">
+          <xpath>Defs/ThingDef[defName="VWE_Apparel_GrenadeToxicBelt"]/costList/Weapon_GrenadeTox</xpath>
+          <value>
+            <Weapon_GrenadeTox>6</Weapon_GrenadeTox>
+          </value>
+        </li>
+
+        <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VWE">
+          <xpath>Defs/ThingDef[defName="VWE_Apparel_GrenadeSmokeBelt"]/costList/VWE_SmokeGrenade</xpath>
+          <value>
+            <VWE_SmokeGrenade>12</VWE_SmokeGrenade>
+          </value>
+        </li>
+
+        <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VWE">
+          <xpath>Defs/ThingDef[defName="VWE_Apparel_GrenadeFlashBelt"]/costList/VWE_FlashGrenade</xpath>
+          <value>
+            <VWE_FlashGrenade>12</VWE_FlashGrenade>
+          </value>
+        </li>
+
+        <li Class="PatchOperationReplace" MayRequire="VanillaExpanded.VWENL">
+          <xpath>Defs/ThingDef[defName="VWE_Apparel_GrenadeTearGasBelt"]/costList/VWE_TearGasGrenade</xpath>
+          <value>
+            <VWE_TearGasGrenade>5</VWE_TearGasGrenade>
+          </value>
+        </li>
+
+        <li Class="PatchOperationReplace" MayRequire="OskarPotocki.VanillaFactionsExpanded.SettlersModule">
+          <xpath>Defs/ThingDef[defName="VWE_Apparel_DynamiteBelt"]/costList/VFES_Weapon_GrenadeDynamite</xpath>
+          <value>
+            <VFES_Weapon_GrenadeDynamite>6</VFES_Weapon_GrenadeDynamite>
+          </value>
+        </li>
+
+      </operations>
+  </Operation>
+
+</Patch>

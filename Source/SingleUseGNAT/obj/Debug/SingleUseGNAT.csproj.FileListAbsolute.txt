@@ -1,0 +1,6 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Freefolk Ammunition - Single Use Grenades N'at\Source\SingleUseGNAT\bin\Debug\SingleUseGNAT.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Freefolk Ammunition - Single Use Grenades N'at\Source\SingleUseGNAT\bin\Debug\SingleUseGNAT.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Freefolk Ammunition - Single Use Grenades N'at\Source\SingleUseGNAT\obj\Debug\SingleUseGNAT.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Freefolk Ammunition - Single Use Grenades N'at\Source\SingleUseGNAT\obj\Debug\SingleUseGNAT.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Freefolk Ammunition - Single Use Grenades N'at\Source\SingleUseGNAT\obj\Debug\SingleUseGNAT.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Freefolk Ammunition - Single Use Grenades N'at\1.4\Assemblies\SingleUseGNAT.dll
