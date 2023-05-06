@@ -57,6 +57,7 @@
     <Compile Include="HarmonyInit.cs" />
     <Compile Include="HarmonyPatches.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Bullet_Spawn.cs" />
     <Compile Include="Verb_LaunchProjectileOneUse.cs" />
   </ItemGroup>
   <ItemGroup>

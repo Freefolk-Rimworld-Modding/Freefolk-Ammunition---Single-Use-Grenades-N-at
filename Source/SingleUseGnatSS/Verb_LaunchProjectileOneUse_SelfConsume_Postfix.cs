@@ -14,7 +14,7 @@ namespace SingleUseGnatSS
         {
             if (!(__instance.caster is Pawn)) return;
             Pawn pawn = (__instance.caster as Pawn);
-            if (!pawn.equipment.GetDirectlyHeldThings().NullOrEmpty()) return;
+            if (pawn.equipment.GetDirectlyHeldThings().Any) return;
             WeaponAssingment.equipBestWeaponFromInventoryByPreference(pawn, DroppingModeEnum.UsedUp);
         }
     }

@@ -42,7 +42,7 @@ namespace SingleUseGNAT
         {
             if (!(__instance.caster is Pawn)) return;
             Pawn pawn = __instance.caster as Pawn;
-            if (pawn.equipment is null || !pawn.equipment.GetDirectlyHeldThings().NullOrEmpty()) return;
+            if (pawn.equipment.GetDirectlyHeldThings().Any) return;
             List<Thing> pawnInv = pawn.inventory?.innerContainer?.InnerListForReading;
             if (pawnInv.NullOrEmpty()) return;
             foreach (Thing thing in pawnInv)

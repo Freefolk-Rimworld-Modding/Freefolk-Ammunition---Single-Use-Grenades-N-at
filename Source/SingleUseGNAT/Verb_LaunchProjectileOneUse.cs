@@ -39,9 +39,9 @@ namespace SingleUseGNAT
                 EquipmentSource.Destroy();
             }
             //if (boolSS) return;
-            if (!(caster is Pawn)) return;
+            if (!CasterIsPawn) return;
             Pawn pawn = caster as Pawn;
-            if (pawn.equipment is null || !pawn.equipment.GetDirectlyHeldThings().NullOrEmpty()) return;
+            if (pawn.equipment.GetDirectlyHeldThings().Any) return;
             List<Thing> pawnInv = pawn.inventory?.innerContainer?.InnerListForReading;
             if (pawnInv.NullOrEmpty()) return;
             foreach (Thing thing in pawnInv)
