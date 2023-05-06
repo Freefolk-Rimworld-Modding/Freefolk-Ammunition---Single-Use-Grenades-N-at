@@ -18,7 +18,7 @@ namespace SingleUseGNAT
             }
             else
             {
-                harmonyInstance.Patch(typeof(PawnInventoryGenerator).GetMethod("GenerateInventoryFor"));
+                harmonyInstance.Patch(typeof(PawnInventoryGenerator).GetMethod("GenerateInventoryFor"), postfix: new HarmonyMethod(typeof(Harmony_PawnInventoryGenerator_GenerateInventoryFor_Postfix).GetMethod("GenerateInventoryFor")));
                 Log.Message("[SingleUseGNAT]Harmony Patching PawnInventoryGenerator");
                 Log.Message("[SingleUseGNAT]Simple sidearms detected, skipping Harmony Patch for Verb_ShootOneUse");
             }

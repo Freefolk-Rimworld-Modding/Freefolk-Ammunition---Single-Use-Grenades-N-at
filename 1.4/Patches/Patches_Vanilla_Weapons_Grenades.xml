@@ -46,7 +46,8 @@
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="Weapon_GrenadeFrag" or defName="Weapon_GrenadeEMP" or defName="Weapon_GrenadeMolotov"]/verbs/li/verbClass</xpath>
     <value>
-      <verbClass>Verb_ShootOneUse</verbClass>
+      <!--<verbClass>Verb_ShootOneUse</verbClass>-->
+      <verbClass>SingleUseGnat.Verb_LaunchProjectileOneUse</verbClass>
     </value>
   </Operation>
 
@@ -61,7 +62,26 @@
       <li MayRequire="LimeTreeSnake.Ammunition" Class="Ammunition.DefModExtensions.AmmunitionExtension" />
     </value>
   </Operation>
-
+<!--
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Weapon_GrenadeFrag"]/comps</xpath>
+    <value>
+        <li Class="MVCF.Comps.CompProperties_VerbsFromInventory">
+          <compClass>MVCF.Comps.CompVerbsFromInventory</compClass>
+          <verbProps>
+            <li>
+              <label>throw frag grenade</label>
+              <visualLabel>throw frag grenade</visualLabel>
+              <separateToggle>true</separateToggle>
+              <toggleLabel>throw frag grenade</toggleLabel>
+              <toggleDescription>throw a frag grenade from you inventory</toggleDescription>
+              <canFireIndependently>false</canFireIndependently>
+            </li>
+          </verbProps>
+        </li>
+    </value>
+  </Operation>
+-->
   <Operation Class="PatchOperationAddModExtension">
     <xpath>Defs/ThingDef[defName="Weapon_GrenadeEMP"]</xpath>
     <value>
