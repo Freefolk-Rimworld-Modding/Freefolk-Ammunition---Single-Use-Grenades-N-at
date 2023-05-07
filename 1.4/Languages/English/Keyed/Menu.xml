@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <FF_GNAT_Settings>Single Use Grenades N'at</FF_GNAT_Settings>
+  
+  <FF_GNATLabel>Reusable Neolithic Weapons and Ammunition</FF_GNATLabel>
+  <FF_GNATToolTip>Neolithic projectiles will spawn the weapon or ammunition.</FF_GNATToolTip>
+
+</LanguageData>

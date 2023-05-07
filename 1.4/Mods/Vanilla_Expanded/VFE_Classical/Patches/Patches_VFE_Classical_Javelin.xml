@@ -85,4 +85,28 @@
     </value>
   </Operation>
 
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="VFEC_Javelin"]/verbs/li/verbClass</xpath>
+    <value>
+      <verbClass>Verb_ShootOneUse</verbClass>
+    </value>
+  </Operation>
+
+  <!-- Projectile --> 
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="VFEC_Javelin_Thrown"]</xpath>
+    <value>
+      <thingClass>SingleUseGNAT.Bullet_Spawn</thingClass>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="VFEC_Javelin_Thrown"]/projectile</xpath>
+    <value>
+      <preExplosionSpawnChance>0.5</preExplosionSpawnChance>
+      <preExplosionSpawnThingCount>1</preExplosionSpawnThingCount>
+      <preExplosionSpawnThingDef>VFEC_Javelin</preExplosionSpawnThingDef>
+    </value>
+  </Operation>
+
 </Patch>

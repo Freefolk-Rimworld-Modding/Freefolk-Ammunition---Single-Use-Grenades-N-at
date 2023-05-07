@@ -46,7 +46,8 @@
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="IA_Weapon_GrenadeSmoke" or defName="IA_Weapon_GrenadeFlash" or defName="IA_Weapon_GrenadeIncendiary"]/verbs/li/verbClass</xpath>
     <value>
-      <verbClass>Verb_ShootOneUse</verbClass>
+      <!--<verbClass>Verb_ShootOneUse</verbClass>-->
+      <verbClass>SingleUseGnat.Verb_LaunchProjectileOneUse</verbClass>
     </value>
   </Operation>
 

@@ -118,4 +118,37 @@
     </value>
   </Operation>
 
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="VWE_Throwing_Knives" or defName="VWE_Throwing_Rocks"]/verbs/li/verbClass</xpath>
+    <value>
+      <verbClass>Verb_ShootOneUse</verbClass>
+    </value>
+  </Operation>
+
+  <!-- Projectile --> 
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="VWE_Rock" or defName="VWE_FlyingBlade"]</xpath>
+    <value>
+      <thingClass>SingleUseGNAT.Bullet_Spawn</thingClass>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="VWE_Rock"]/projectile</xpath>
+    <value>
+      <preExplosionSpawnChance>0.5</preExplosionSpawnChance>
+      <preExplosionSpawnThingCount>1</preExplosionSpawnThingCount>
+      <preExplosionSpawnThingDef>VWE_Throwing_Rocks</preExplosionSpawnThingDef>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="VWE_FlyingBlade"]/projectile</xpath>
+    <value>
+      <preExplosionSpawnChance>0.5</preExplosionSpawnChance>
+      <preExplosionSpawnThingCount>1</preExplosionSpawnThingCount>
+      <preExplosionSpawnThingDef>VWE_Throwing_Knives</preExplosionSpawnThingDef>
+    </value>
+  </Operation>
+
 </Patch>

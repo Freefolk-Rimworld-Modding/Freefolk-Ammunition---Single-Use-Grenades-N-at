@@ -13,7 +13,8 @@
       ]/verbs/li/verbClass
     </xpath>
     <value>
-      <verbClass>Verb_ShootOneUse</verbClass>
+      <!--<verbClass>Verb_ShootOneUse</verbClass>-->
+      <verbClass>SingleUseGnat.Verb_LaunchProjectileOneUse</verbClass>
     </value>
   </Operation>
 

@@ -120,7 +120,7 @@
   <Operation Class="PatchOperationAdd">
     <xpath>Defs/ThingDef[defName="Pilum_Thrown"]/projectile</xpath>
     <value>
-      <preExplosionSpawnChance>1</preExplosionSpawnChance>
+      <preExplosionSpawnChance>0.5</preExplosionSpawnChance>
       <preExplosionSpawnThingCount>1</preExplosionSpawnThingCount>
       <preExplosionSpawnThingDef>Pila</preExplosionSpawnThingDef>
     </value>

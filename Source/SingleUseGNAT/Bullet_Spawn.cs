@@ -55,25 +55,26 @@ namespace SingleUseGNAT
                 {
                     FleckMaker.Static(ExactPosition, map, FleckDefOf.ShotHit_Dirt);
                 }
-            }
-            if (position.IsValid &&
-                def.projectile.preExplosionSpawnChance > 0 &&
-                def.projectile.preExplosionSpawnThingCount > 0 &&
-                def.projectile.preExplosionSpawnThingDef != null &&
-                Rand.Value < def.projectile.preExplosionSpawnChance
-                )
-            {
-                ThingDef thingDef = def.projectile.preExplosionSpawnThingDef;
-                int count = def.projectile.preExplosionSpawnThingCount;
-                if (thingDef.IsFilth && position.Walkable(map))
+                if (position.IsValid &&
+                    def.projectile.preExplosionSpawnChance > 0 &&
+                    def.projectile.preExplosionSpawnThingCount > 0 &&
+                    def.projectile.preExplosionSpawnThingDef != null &&
+                    Rand.Chance(def.projectile.preExplosionSpawnChance)
+                    )
                 {
-                    FilthMaker.TryMakeFilth(position, map, thingDef, count);
-                }
-                else
-                { 
-                    Thing thing = ThingMaker.MakeThing(thingDef);
-                    thing.stackCount = count;
-                    GenPlace.TryPlaceThing(thing, position, map, ThingPlaceMode.Near);
+                    ThingDef thingDef = def.projectile.preExplosionSpawnThingDef;
+                    int count = def.projectile.preExplosionSpawnThingCount;
+                    if (thingDef.IsFilth && position.Walkable(map))
+                    {
+                        FilthMaker.TryMakeFilth(position, map, thingDef, count);
+                    }
+                    else if (GNATSettings.reuseNeoAmmo)
+                    {
+                        Thing thing = ThingMaker.MakeThing(thingDef);
+                        thing.stackCount = count;
+                        thing.SetForbidden(true, false);
+                        GenPlace.TryPlaceThing(thing, position, map, ThingPlaceMode.Near);
+                    }
                 }
             }
             if (Rand.Chance(def.projectile.bulletChanceToStartFire))
